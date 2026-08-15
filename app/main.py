@@ -28,11 +28,11 @@ async def health():
         "status": "ok"
     }
 
-@app.get("/tasks")
+@app.get("/tasks",description="Get all tasks")
 async def get_tasks():
     return tasks
 
-@app.get("/tasks/{task_id}")
+@app.get("/tasks/{task_id}",description="Get a task by ID")
 async def get_task(task_id: int):
     for task in tasks:
         if task["id"] == task_id:
@@ -44,7 +44,7 @@ async def get_task(task_id: int):
         }
     )
 
-@app.post("/tasks", status_code=201)
+@app.post("/tasks", description="Create a new task", status_code=201)
 async def create_task(task: TaskCreate):
     if not task.title.strip():
         return JSONResponse(
@@ -61,7 +61,7 @@ async def create_task(task: TaskCreate):
     tasks.append(new_task)
     return new_task
 
-@app.put("/tasks/{task_id}", status_code=201)
+@app.put("/tasks/{task_id}", description="Update a task", status_code=201)
 async def update_task(task_id: int, task: TaskCreate):
     if not task.title.strip():
         return JSONResponse(
@@ -84,7 +84,7 @@ async def update_task(task_id: int, task: TaskCreate):
         }
     )
 
-@app.delete("/tasks/{task_id}", status_code=204)
+@app.delete("/tasks/{task_id}", description="Delete a task", status_code=204)
 async def delete_task(task_id: int):
     for task in tasks:
         if task["id"] == task_id:

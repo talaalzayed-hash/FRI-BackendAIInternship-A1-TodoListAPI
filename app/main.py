@@ -1,7 +1,6 @@
-from http.client import HTTPException
-
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -10,6 +9,10 @@ tasks = [
     {"id": 2, "title": "Build a REST API", "done": True},
     {"id": 3, "title": "Deploy the API", "done": False}
 ]
+
+class TaskCreate(BaseModel):
+    title: str
+    done: bool
 
 @app.get("/")
 async def root():
@@ -37,6 +40,25 @@ async def get_task(task_id: int):
     return JSONResponse(
         status_code=404,
         content={
-            "error": f"Task {task_id} not found"
+            "message": f"Task {task_id} not found"
         }
     )
+
+@app.post("/tasks", status_code=201)
+async def create_task(task: TaskCreate):
+    if not task.title.strip():
+        return JSONResponse(
+            status_code=400,
+            content={
+                "message": "Title is required"
+            }
+        )
+    new_task = {
+        "id": len(tasks) + 1,
+        "title": task.title,
+        "done": task.done
+    }
+    tasks.append(new_task)
+    return new_task
+
+

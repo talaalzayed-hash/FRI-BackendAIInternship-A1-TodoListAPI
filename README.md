@@ -140,11 +140,15 @@ PUT tasks/1 with an empty title returning 400 Title is required
 
 DELETE tasks/1 returning 204 with no content
 
+<img width="546" height="41" alt="Screenshot 2026-08-15 171755" src="https://github.com/user-attachments/assets/f9673b27-5edf-498c-bb0b-d81371fb4fb8" />
+
 <img width="1154" height="666" alt="7 delete" src="https://github.com/user-attachments/assets/65bc3fc6-d2d6-4309-b2f8-677a7eb0d70f" />
 
 ### DELETE `/tasks/{id}` — Task not found
 
 Deleting the same task again returns 404.
+
+<img width="546" height="41" alt="Screenshot 2026-08-15 171755" src="https://github.com/user-attachments/assets/f9673b27-5edf-498c-bb0b-d81371fb4fb8" />
 
 <img width="1144" height="769" alt="7 delete-404" src="https://github.com/user-attachments/assets/42ba8d9f-e894-4d02-ad38-6d277b07c189" />
 

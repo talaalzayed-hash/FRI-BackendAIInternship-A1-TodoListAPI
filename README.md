@@ -101,10 +101,12 @@ GET tasks returning 200 with the list of seeded tasks
 
 <img width="748" height="40" alt="Screenshot 2026-08-15 170352" src="https://github.com/user-attachments/assets/eef56632-53c0-40bb-9891-0386953adc74" />
 
-
+<img width="1150" height="768" alt="Screenshot 2026-08-15 170640" src="https://github.com/user-attachments/assets/b7e44de0-8ae9-4a73-bbf9-3327a9038177" />
 
 ### GET `/tasks/{id}` — Task not found
 Requesting an ID that does not exist returns 404.
+
+<img width="764" height="28" alt="Screenshot 2026-08-15 170558" src="https://github.com/user-attachments/assets/444e061e-d238-439d-9ad6-ca90164a780c" />
 
 <img width="1423" height="770" alt="Screenshot 2026-08-15 150850" src="https://github.com/user-attachments/assets/98b679a4-2c18-40ee-9804-22ab5d0ebd0d" />
 

@@ -61,4 +61,38 @@ async def create_task(task: TaskCreate):
     tasks.append(new_task)
     return new_task
 
+@app.put("/tasks/{task_id}", status_code=201)
+async def update_task(task_id: int, task: TaskCreate):
+    if not task.title.strip():
+        return JSONResponse(
+            status_code=400,
+            content={
+                "message": "Title is required"
+            }
+        )
+    for existing_task in tasks:
+        if existing_task["id"] == task_id:
+            existing_task["title"] = task.title
+            existing_task["done"] = task.done
+            return {
+                "task": existing_task
+            }
+    return JSONResponse(
+        status_code=404,
+        content={
+            "message": f"Task {task_id} not found"
+        }
+    )
 
+@app.delete("/tasks/{task_id}", status_code=204)
+async def delete_task(task_id: int):
+    for task in tasks:
+        if task["id"] == task_id:
+            tasks.remove(task)
+            return 
+    return JSONResponse(
+        status_code=404,
+        content={
+            "message": f"Task {task_id} not found"
+        }
+    )

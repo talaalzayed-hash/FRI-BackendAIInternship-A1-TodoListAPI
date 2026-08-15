@@ -111,32 +111,44 @@ Requesting an ID that does not exist returns 404.
 <img width="1423" height="770" alt="Screenshot 2026-08-15 150850" src="https://github.com/user-attachments/assets/98b679a4-2c18-40ee-9804-22ab5d0ebd0d" />
 
 ### POST `/tasks` — Create a task
+
 POST tasks returning 201 with the newly created task
 
+<img width="1433" height="893" alt="5 Post" src="https://github.com/user-attachments/assets/598af295-081a-4962-9a25-48e9d0d634a3" />
 
 ### POST `/tasks` — Empty title
 
 An empty `title` is rejected with 400.
 
-![POST tasks with an empty title returning 400 Title is required](screenshots/06-post-task-400.png)
+<img width="1277" height="846" alt="5 POST-title required" src="https://github.com/user-attachments/assets/c4831f0a-e48f-41ac-93b5-338c4bb28ddf" />
+
 
 ### PUT `/tasks/{id}` — Update a task
 
-![PUT tasks/1 returning 201 with the updated task](screenshots/07-put-task-201.png)
+PUT tasks/1 returning 201 with the updated task
+
+<img width="1145" height="915" alt="6 put" src="https://github.com/user-attachments/assets/93042bd6-b8b2-4d55-b736-6176b51d452b" />
 
 ### PUT `/tasks/{id}` — Empty title
 
-![PUT tasks/1 with an empty title returning 400 Title is required](screenshots/08-put-task-400.png)
+PUT tasks/1 with an empty title returning 400 Title is required
+
+<img width="1148" height="881" alt="6 put-title" src="https://github.com/user-attachments/assets/bcc02445-3898-497b-b389-f24354a8ae8f" />
+
 
 ### DELETE `/tasks/{id}` — Delete a task
 
-![DELETE tasks/1 returning 204 with no content](screenshots/09-delete-task-204.png)
+DELETE tasks/1 returning 204 with no content
+
+<img width="1154" height="666" alt="7 delete" src="https://github.com/user-attachments/assets/65bc3fc6-d2d6-4309-b2f8-677a7eb0d70f" />
 
 ### DELETE `/tasks/{id}` — Task not found
 
 Deleting the same task again returns 404.
 
-![DELETE tasks/1 returning 404 with Task 1 not found](screenshots/10-delete-task-404.png)
+<img width="1144" height="769" alt="7 delete-404" src="https://github.com/user-attachments/assets/42ba8d9f-e894-4d02-ad38-6d277b07c189" />
+
+
 
 ## Project Structure
 

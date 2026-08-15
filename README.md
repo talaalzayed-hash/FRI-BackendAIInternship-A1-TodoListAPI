@@ -80,23 +80,31 @@ Swagger UI listing all endpoints
 GET root returning 200 with the API name, version and endpoints
 
 <img width="458" height="51" alt="image" src="https://github.com/user-attachments/assets/f9aa57cc-5267-486f-8b50-8cdb415e14ee" />
+
 <img width="1425" height="805" alt="1 Get-root" src="https://github.com/user-attachments/assets/4a646316-e8a2-4c46-b93b-c3c5f4beb87b" />
 
 ### GET `/health` — Health check
 GET health returning 200 with status ok
 
 <img width="506" height="52" alt="Screenshot 2026-08-15 170036" src="https://github.com/user-attachments/assets/88f12e7a-c696-4de6-b4ac-aaa9d43b3bc4" />
+
 <img width="1431" height="756" alt="2 health test" src="https://github.com/user-attachments/assets/ca364187-e2ee-4a1b-8502-f7b24cc3bb09" />
 
 ### GET `/tasks` — Get all tasks
 GET tasks returning 200 with the list of seeded tasks
 
 <img width="382" height="74" alt="Screenshot 2026-08-15 165649" src="https://github.com/user-attachments/assets/c0ade29d-f9fe-4763-9f89-7f106c5e8e2c" />
+
 <img width="1436" height="911" alt="3 get-all-tasks" src="https://github.com/user-attachments/assets/bc317c91-4d3a-4fc2-ab34-e5ca5c2ac2fc" />
+
+### GET `/tasks/{id}` -- Get Task by id 
+
+<img width="748" height="40" alt="Screenshot 2026-08-15 170352" src="https://github.com/user-attachments/assets/eef56632-53c0-40bb-9891-0386953adc74" />
+
+
 
 ### GET `/tasks/{id}` — Task not found
 Requesting an ID that does not exist returns 404.
-
 
 <img width="1423" height="770" alt="Screenshot 2026-08-15 150850" src="https://github.com/user-attachments/assets/98b679a4-2c18-40ee-9804-22ab5d0ebd0d" />
 

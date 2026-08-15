@@ -72,7 +72,7 @@ The API is then available at `http://127.0.0.1:8000`, and the interactive Swagge
 All endpoints were tested through the Swagger UI at `/docs`.
 
 ### Swagger UI
-![Swagger UI listing all endpoints]
+Swagger UI listing all endpoints
 <img width="1497" height="571" alt="Swagger" src="https://github.com/user-attachments/assets/79520409-b9cd-4280-a4c9-2afc2dccfd6d" />
 
 ### GET `/` — API info
@@ -92,7 +92,8 @@ Requesting an ID that does not exist returns 404.
 <img width="1423" height="770" alt="Screenshot 2026-08-15 150850" src="https://github.com/user-attachments/assets/98b679a4-2c18-40ee-9804-22ab5d0ebd0d" />
 
 ### POST `/tasks` — Create a task
-![POST tasks returning 201 with the newly created task](screenshots/05-post-task-201.png)
+POST tasks returning 201 with the newly created task
+
 
 ### POST `/tasks` — Empty title
 
